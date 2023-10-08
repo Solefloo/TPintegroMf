@@ -1,0 +1,419 @@
+:root {
+    --colorFraHead: rgb(51, 58, 64) ;
+    --colorText: white;
+    --colorV: rgb(41,167,68); 
+    --colorBotonEn: rgb(150, 201, 62);
+    --colorFraFoot: rgb(30,76,102);
+    --colorBott1: rgb(254,193,4); 
+    --colorBott2: rgb(23, 162,185); 
+    --colorBott1a: rgb(108,117,126); 
+    --colorBott2a: rgb(220,53,70); 
+    --coloText1: black; 
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    display: flex;
+    background-color: var(--colorFraHead);
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    
+    .logoCaC {
+        display: flex;
+        align-items: center;
+        & img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        & h2{
+            display:inline-block;
+            color: var(--colorText);
+        }
+
+    }
+    & nav {
+        float: right;
+        margin: 1.5em;
+        & a {
+            color: var(--colorText);
+            text-decoration: none;
+            padding-right: 1em;
+        }
+        .textTi {
+            color: var(--colorV);
+        }
+    }
+   @media (max-width:700px){
+        header{
+            flex-direction: column;
+        }
+    }
+}
+
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 15s infinite linear;
+
+}
+.slider li {
+    width: 100%;
+    list-style: none;
+
+}
+.slider img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+}
+    
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+    
+}
+
+main {
+    position: relative;
+    
+}
+main section {
+    
+     width: 35%;
+     max-height: 200px;
+     min-width: 600px;
+     position: absolute;
+     right: 4em;
+     top: 50%;
+     line-height: 1.2em;
+     text-align: right;
+
+    & h1 {
+        color: var(--colorText);
+        margin: 0.5em;
+    }
+    & p {
+        color: var(--colorText);
+        margin: 1em;
+        margin-bottom: 2em;
+
+    }
+    & a { 
+        text-decoration: none;
+        color: var(--colorText);
+        border: 0.1em solid var(--colorText);
+        border-radius: 0.4em;
+        margin: 0.8em;
+        padding: 0.8em;
+
+    } 
+    .botonV {
+        border:0.1em solid var(--colorV) ;
+        background-color: var(--colorV);
+    } 
+
+}
+
+@media screen and (max-width: 700px) {
+    main section { 
+        width: auto;
+        top:25%;
+        
+    }
+
+}
+.container-grid {
+    display: grid;
+    grid-template-areas:  'orador orador'
+                          'paisaje descripcion'
+                          'form form';
+    width: 100%;
+    grid-template-rows: minmax(100vh) minmax(70vh) minmax(70vh);
+    grid-template-columns: 50% 50%;
+    & div[class^='sector'] {
+        border: 2px solid var(--colorText);
+    } 
+    .sector-1 {
+        grid-area: orador;
+        .tituloOrador {
+            margin: 2em;
+            text-align: center;
+            & h2 {
+                font-size: 1.8em;
+                margin: 0.5em;
+            }
+            & h4 {
+                font-size: 1em;
+                color: var(--colorFraHead);
+            }
+        }
+        .tarjOradores{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+           
+            & div[class^='orador']{
+                width: 20em;
+                border: 1px solid grey;
+                & img{
+                    width: 100%;
+    
+                }
+                .tarjeta {
+                    width: 75%;
+                    margin: 1.5em;
+                    & a {
+                        text-decoration: none;
+                        padding: 0 4px;
+                    }
+                    .bott-1 {
+                        background: var(--colorBott1);
+                        border: 2px solid var(--colorBott1);
+                        color: var(--coloText1);
+                        font-weight: 700;
+                        border-radius: 4px;
+                    }
+                    .bott-2 {
+                        background-color: var(--colorBott2);
+                        border: 2px solid var(--colorBott2);
+                        color: var(--colorText);
+                        font-weight: 700;
+                        border-radius: 4px;
+
+                    }
+                    .bott-3 {
+                        background-color: var(--colorBott1a);
+                        border: 2px solid var(--colorBott1a);
+                        color: var(--colorText);
+                        font-weight: 700;
+                        border-radius: 4px;
+                    }
+                    .bott-4 {
+                        background-color: var(--colorBott2a);
+                        border: 2px solid var(--colorBott2a);
+                        color: var(--colorText);
+                        font-weight: 700;
+                        border-radius: 4px;
+
+                    }
+
+
+                    &h3 {
+                       /* margin: 5px 0 10px 0;*/
+                       margin: 2em;
+                        font-size: 2em;
+            
+                    }
+                    &p {
+                        font-size: 0.7em;
+                        line-height: 1.2em;
+                       
+                    }
+                }
+    
+            }
+        }
+
+
+    }   
+    .sector-2 {
+        grid-area: paisaje;
+    
+        & img {
+            width: 100%;
+            height: 100%;
+            
+        }
+
+    }  
+    
+    .sector-3 {
+        
+        grid-area: descripcion;
+        background: var(--colorFraHead);
+        padding: 1em;
+        width: 100%;
+
+        
+       
+        & h2 {
+            font-size: 2em;
+            color:var(--colorText);
+            
+        }
+        & p {
+            color: var(--colorText);
+            margin: 1.5em 0 ;
+            line-height: 2em;
+        }
+        & a {
+            border: 2px solid;
+            border-radius: 5px;
+            color: var(--colorText);
+            text-decoration: none;
+            padding: 0.4em;
+           
+
+        }
+
+    }  
+
+    
+    .sector-4 {
+        grid-area: form;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 2em 0;
+        .containerText {
+            width: 100%;
+            text-align: center;
+            margin: 1em;
+            &h2 {
+                font-size: 3em;
+                margin: 0.5em;
+                color: var(--coloText1);
+            }
+            &h4 {
+                margin: 1.8em;
+                font-size: 1em;
+            }
+            &p {
+                margin: 5px;
+                font-size: 2px;
+            }
+         
+        }
+
+        .containerForm {
+            display: grid;
+            gap: 2em;
+            text-align: center;
+            padding: 0 300px;
+            width: auto;
+
+            .groupinput {
+                position: relative;
+                width: 100%;
+
+               .nombreForm {
+                font-size: 2em;
+                
+                }
+              .apellidoForm {
+                    font-size: 2em;
+                }
+            }
+            .textForm {
+                width: 100%;
+                
+
+            }
+            .txtP {
+                margin-right: auto;
+                &p {
+                    margin: 0;
+                }
+
+            }
+            
+            
+            .bottForm {
+                background: var(--colorBotonEn);
+                text-align: center;
+                border-radius: 5px;
+                color: var(--colorText);
+                border-style: var(--colorBotonEn);
+                padding: 1em;
+                font-weight: 700;
+                font-size: 1.2em;
+                
+               
+            
+            }
+
+        }
+        
+       
+        
+    }   
+     
+}
+
+@media screen and (max-width: 700px) {
+    .container-grid { 
+        grid-template-areas:  'orador orador'
+                              'paisaje paisaje'
+                              'descripcion descripcion'
+                              'form form';
+        
+
+    }
+} 
+
+footer {
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: var(--colorFraFoot);
+    min-height: 60px;
+    height: 4em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+
+  & nav {
+        float: right;
+        margin: 1.5em;
+       
+        
+        & a {
+            color: var(--colorText);
+            text-decoration: none;
+            padding-right: 1em;
+            margin-inline: 3em;
+            font-weight: 700;
+        }
+        
+    }
+} 
+
+@media (max-width:700px){
+    footer {
+        flex-direction: column;
+    }
+}
