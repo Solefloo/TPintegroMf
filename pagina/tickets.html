@@ -1,0 +1,125 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="styleTic.css">
+</head>
+<body>
+    <header>
+        <div class="logoCaC">
+            <img src="../asset/logo.png" alt="Imagen del logo">
+            <h2> Conf Bs As</h2>
+        </div>
+        <nav>
+            <a href="#">La conferencia</a>
+            <a href="#personaOrador">Los oradores</a>
+            <a href="#lugarFecha">El lugar y la fecha</a>
+            <a href="#convertidor">Conviértete en orador</a>
+            <a href="#comprarTicket">Comprar tickets</a>
+        </nav>
+    </header>
+    <br>
+    <!--Cartas-->
+    <main>
+        <div class="containerCard">
+            <div class="card-1">
+                <h5>Estudiante</h5>
+                <h6>Tienen un descuento</h6>
+                <h5>80%</h5>
+                <p>*Presentar documentación</p>
+            </div>
+            <div class="card-2">
+                <h5>Trainee</h5>
+                <h6>Tienen un descuento</h6>
+                <h5>50%</h5>
+                <p>*Presentar documentación</p>
+            </div>
+            <div class="card-3">
+                <h5>Junior</h5>
+                <h6>Tienen un descuento</h6>
+                <h5>15%</h5>
+                <p>*Presentar documentación</p>
+            </div>
+        </div>
+        
+    </main>
+    <!--Formulario-->
+
+    <section class="containerForm">
+
+        <div class="headT">
+            <h6>Venta</h6>
+            <h2>VALOR DE TICKET $200</h2>
+        </div>
+        <div class="containerD">
+           
+            
+            <form > 
+                <div class="datosNA">
+                    <div>
+                        <input id="nombre" class="register"  type="text" placeholder="Nombre" aria-label="Nombre">
+                    </div>
+                    <div>
+                        <input id="apellido" class="register" type="text" placeholder="Apellido" aria-label="Apellido">
+                    </div>
+    
+                </div>
+                <div class="emailS">
+                    <input id="email"class="registerCorr" type="email" placeholder="nombre@ejemplo.com">
+                </div>
+                <div class="datosCC">
+                    <div >
+                        <label for="cantidad">Cantidad de entradas</label>
+                        <br>
+                        <input id="cantidad" class="registerCant" type="number" placeholder="" >
+                    </div>
+                    <div >
+                        <label for="categoria">Categoria</label>
+                        <br>
+                        <select id="categoria" class="registerCat" >
+                            <option selected=""></option>
+                            <option value="0">Sin Categoria</option>
+                            <option value="1">Estudiante</option>
+                            <option value="2">Trainee</option>
+                            <option value="3">Junior</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="totalPago"  role="alert"> 
+                        Total a pagar:$ <span id="total" class="text"></span>
+                    </div>
+                    <br>
+                    <div class="botones">
+                        <div>
+                            <button id="botonBo" class="btn-B"  type="reset" > Borrar</button>
+                        </div>
+                        <div>
+                            <button id="botonRe" class="btn-R" type="button">Resumen</button>
+                        </div>.
+                    </div>
+                </div>
+            </form>
+            
+           
+        </div>
+        
+        
+    </section>
+    <footer>
+        <nav>
+            <a href="#preguntas">Preguntas Frecuentes</a>
+            <a href="#contacto">Contáctanos</a>
+            <a href="#prensa">Prensa</a>
+            <a href="#conferencia">Conferencia</a>
+            <a href="#terminos_codiciones">Términos y condiciones</a>
+            <a href="#privacidad">Privacidad</a>
+            <a href="#estudiantes">Estudiantes</a>
+        </nav>
+     </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
