@@ -1,0 +1,273 @@
+:root {
+    --colorText: white;
+    --colorV: rgb(140, 201, 60); 
+    --coloText1: black; 
+    --colorTEst:rgb(3, 126, 175);
+    --colorTTra:rgb(5, 109, 100);
+    --colorTJun:rgb(247, 227, 50);
+    --colorFraFoot: rgb(30,76,102);
+    --colorFraHead: rgb(51, 58, 64);
+    --colorTotal:rgb(95, 194, 224);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    display: flex;
+    background-color: var(--colorFraHead);
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    
+    .logoCaC {
+        display: flex;
+        align-items: center;
+        & img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        & h2{
+            display:inline-block;
+            color: var(--colorText);
+        }
+
+    }
+    & nav {
+        float: right;
+        margin: 1.5em;
+        & a {
+            color: var(--colorText);
+            text-decoration: none;
+            padding-right: 1em;
+        }
+        .textTi {
+            color: var(--colorV);
+        }
+    }
+   @media (max-width:700px){
+        header{
+            flex-direction: column;
+        }
+    }
+}
+main {
+    position: relative;
+    
+}
+.containerCard {
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 60em;
+    flex-flow: row;
+    margin: auto;
+    margin-top: 5em;
+
+    & div[class^='card']{
+        font-weight: 10em;
+        border: 3px solid ;
+        width: 20em;
+        padding: 1em;
+        margin: 0.2em;
+        border-color: var(--colorTEst);
+    }
+   
+
+    & h5 {
+        text-align: center;
+        padding-bottom: 1em;
+        font-size: 1.4em;
+    }
+    & h6 {
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    
+    & p {
+        text-align: center;
+        
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main .containerCard { 
+        flex-direction: column;
+        
+    }
+        
+}   
+
+.containerForm {
+    width: 60em;
+    padding-top: 1em ;
+    padding-bottom: 2em;
+    margin: auto;
+    margin-top: 1em;
+    .containerD {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+}
+
+.headT {
+    width: auto;
+    & h6{
+        text-align: center;
+    }
+    & h2{
+        text-align: center;
+    }
+}
+
+.datosNA {
+    display: flex;
+    flex-flow: row;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  
+
+}
+.register {
+    padding: 10px;
+    margin-top: 1em;
+    width: 40em;
+    cursor: pointer;
+    transition: transform .5s,  color.3s ;
+    
+    
+}
+.registerCorr {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 700px) {
+    .datosNA { 
+        flex-direction: column;
+        text-align: center;
+    }
+        
+}   
+
+.datosCC {
+    display: flex;
+    flex-flow: row;
+    
+    .registerCant {
+        width: 40em;
+        margin-top: 1em;
+        padding: 10px;
+        cursor: pointer;
+      
+    }
+    .registerCat {
+        width: 40em;
+        padding: 10px;
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+}
+  
+.totalPago {
+    width: 100%;
+    border: solid 1px;
+    margin-top: 1em;
+    padding: 0.8em;
+    background-color: var(--colorTotal);
+
+}
+
+@media screen and (max-width: 700px) {
+    .datosCC { 
+        flex-direction: column;
+        text-align: center;
+    }
+        
+} 
+
+.botones {
+    display: flex;
+    flex-flow: row;
+   
+    & div [class^='btn']{
+        padding: 10px;
+        margin-top: 3em;
+        border-radius: 4px;
+        width: 38em;
+        margin: 1em;
+        background-color: var(--colorV);
+        border: none;
+        color:var(--colorText);
+        cursor: pointer;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .botones { 
+        flex-direction: column;
+        text-align: center;
+    }
+        
+}   
+
+
+footer {
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: var(--colorFraFoot);
+    min-height: 60px;
+    height: 4em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    & nav {
+        float: right;
+        margin: 1.5em;
+       
+        
+        & a {
+            color: var(--colorText);
+            text-decoration: none;
+            padding-right: 1em;
+            margin-inline: 3em;
+            font-weight: 700;
+        }
+        
+    }
+    
+} 
+
+@media (max-width:700px){
+    footer {
+        flex-direction: column;
+    }
+}
+
